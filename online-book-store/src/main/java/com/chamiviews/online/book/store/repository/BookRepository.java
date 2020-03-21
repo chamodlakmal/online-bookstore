@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.chamiviews.online.book.store.entity.Book;
 
-@CrossOrigin("*")
 public interface BookRepository extends JpaRepository<Book, Long>{
 	@RestResource(path = "categoryid")
 	Page<Book> findByCategoryId(@Param("id") Long id,Pageable pageable);
